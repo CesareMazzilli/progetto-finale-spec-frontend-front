@@ -1,0 +1,92 @@
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 18px 8px;
+}
+
+.sidebar.visible {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.sidebar.visible+.overlay {
+    display: block;
+}
+
+.side-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    /* Smaller font size */
+}
+
+.side-row h2 {
+    margin: 0;
+    font-size: 1rem;
+    /* Adjust title size */
+}
+
+.side-row p {
+    margin: 0;
+    font-size: 0.8rem;
+    /* Adjust category size */
+}
+
+.side-row .app-like {
+    margin-left: auto;
+    /* Push the heart icon to the right */
+}
+
+.close-sidebar-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Bright red background */
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    /* White color for the X */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.close-sidebar-button:hover {
+    transform: scale(1.2);
+    /* Slightly enlarge on hover */
+    color: #f00;
+}
