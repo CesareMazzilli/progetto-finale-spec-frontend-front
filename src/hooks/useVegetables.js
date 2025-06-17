@@ -1,30 +1,30 @@
 import { useEffect, useMemo, useState } from "react";
-import fetchData from "../utilities";
-import { fruit } from "../../back/fruit.js";
+import fetchData from "../utilities.js";
+import { vegetable } from "../../back/vegetable.js";
 
-export default function useFruits() {
+export default function useVegetables() {
 
-    const [fruits, setFruits] = useState([])
+    const [vegetables, setVegetables] = useState([])
 
     const api = "http://localhost:3333"
 
     useEffect(() => {
-        getFruits()
+        getVegetables()
     }, [])
 
-    const getFruits = async () => {
+    const getVegetables = async () => {
         try {
-            // const response = await fetchData(`${api}/fruits`)
-            setFruits(fruit)
+            // const response = await fetchData(`${api}/vegetble`)
+            setVegetables(vegetable)
         } catch (error) {
             console.error("Error fetching data:", error)
         }
     }
 
-    const getSingleFruit = async (id) => {
+    const getSingleVegetable = async (id) => {
         const idToFind = parseInt(id)
-        // const response = await fetchData(`${api}/fruits/${id}`)
-        const response = fruits.find(item => item.id === idToFind)
+        // const response = await fetchData(`${api}/vegetables/${id}`)
+        const response = vegetables.find(item => item.id === idToFind)
 
         if (response === undefined) {
             throw new Error("Error fetching single data:")
@@ -32,22 +32,22 @@ export default function useFruits() {
         return response
     }
 
-    const deleteFruits = async (id) => {
+    const deleteVegetables = async (id) => {
         const idToFind = parseInt(id);
-        const response = fruits.find(fruit => fruit.id === idToFind);
+        const response = vegetables.find(vegetable => vegetable.id === idToFind);
 
         console.log(response);
 
         if (response) {
-            setFruits(prev => prev.filter(item => item.id !== id))
+            setVegetables(prev => prev.filter(item => item.id !== id))
         }
         if (!response) {
             throw new Error("Error deleting data:", response)
         }
     }
 
-    const addFruits = async (data) => {
-        const response = await fetch(`${api}/fruits`, {
+    const addVegetables = async (data) => {
+        const response = await fetch(`${api}/vegetables`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -58,12 +58,12 @@ export default function useFruits() {
             throw new Error("Network response was not ok", response.messageS);
         }
         if (response) {
-            setFruits(prev => [...prev, { id: prev.length + 1, ...data }])
+            setVegetables(prev => [...prev, { id: prev.length + 1, ...data }])
         }
 
     }
 
-    const putFruits = async (id, data) => {
+    const putVegetables = async (id, data) => {
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -74,7 +74,7 @@ export default function useFruits() {
                 "nutritionalValues": data.nutritionalValues
             })
         };
-        const response = await fetch(`${api}/fruits/${id}`, requestOptions);
+        const response = await fetch(`${api}/vegetables/${id}`, requestOptions);
 
         if (!response.ok) {
             const errorDetails = await response.json();
@@ -82,22 +82,22 @@ export default function useFruits() {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
 
-        const updatedFruit = await response.json();
+        const updatedVegetable = await response.json();
 
         // Aggiorna lo stato locale
-        setFruits(prev => prev.map(fruit => fruit.id === id ? updatedFruit : fruit));
+        setVegetables(prev => prev.map(vegetable => fruit.id === id ? updatedFruit : vegetable));
 
     };
 
     const allCategory = useMemo(() => {
-        const categorys = []
+        const categories = []
         fruits.forEach((item) => {
-            if (!categorys.includes(item.category)) {
-                categorys.push(item.category)
+            if (!categories.includes(item.category)) {
+                categories.push(item.category)
             }
         })
-        return categorys
-    }, [fruits])
+        return categories
+    }, [vegetables])
 
-    return [fruits, setFruits, getFruits, getSingleFruit, deleteFruits, addFruits, putFruits, allCategory];
+    return [vegetables, setVegetables, getVegetables, getSingleVegetable, deleteVegetables, addVegetables, putVegetables, allCategory];
 }

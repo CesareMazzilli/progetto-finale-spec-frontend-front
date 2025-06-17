@@ -3,9 +3,9 @@ import './AppSidebar.css';
 import AppLike from '../components/AppLike';
 
 export default function AppSidebar() {
-    const { like, fruits, sideVisible, setSideVisible } = useGlobalContext();
+    const { like, vegetables, sideVisible, setSideVisible } = useGlobalContext();
 
-    const preferiti = fruits.filter((item) => {
+    const preferiti = vegetables.filter((item) => {
         return (like.includes(item.id))
     })
 

@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from "react";
-import useFruits from "../hooks/useFruits";
+import useVegetables from "../hooks/useVegetables";
 
 const GlobalContext = createContext();
 
 function GlobalProvider({ children }) {
     const [like, setLike] = useState(JSON.parse(localStorage.getItem('like')) || []);
-    const [fruits, setFruits, getFruits, getSingleFruit, deleteFruits, addFruits, putFruits, allCategory] = useFruits()
+    const [vegetables, setVegetables, getVegetables, getSingleVegetable, deleteVegetables, addVegetables, putVegetables, allCategory] = useVegetables()
 
     const [sideVisible, setSideVisible] = useState(false);
 
@@ -24,7 +24,7 @@ function GlobalProvider({ children }) {
     const globalProviderValue = {
         like, handleLike, // Like state and function
         sideVisible, setSideVisible, // Sidebar visibility state and function
-        fruits, setFruits, getFruits, getSingleFruit, deleteFruits, addFruits, putFruits, allCategory
+        vegetables, setVegetables, getVegetables, getSingleVegetable, deleteVegetables, addVegetables, putVegetables, allCategory
     };
 
     return (

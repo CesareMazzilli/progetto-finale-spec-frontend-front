@@ -11,9 +11,9 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 export default function DetailPage() {
 
     const { id } = useParams()
-    const { getSingleFruit, putFruits } = useGlobalContext()
+    const { getSingleVegetable, putVegetables } = useGlobalContext()
 
-    const [fruitData, setFruitData] = useState({})
+    const [vegetableData, setVegetableData] = useState({})
     const [modalBool, setModalBool] = useState(false)
     const [formData, setFormData] = useState({});
 
@@ -40,18 +40,18 @@ export default function DetailPage() {
 
     const getData = async () => {
         try {
-            setFruitData(await getSingleFruit(id))
+            setVegetableData(await getSingleVegetable(id))
         } catch (error) {
-            console.error("Error fetching fruit data:", error)
+            console.error("Error fetching vegetable data:", error)
         }
     }
 
     //al modify far vedere elemento modificato
     const handleModify = useCallback(debounce((id, formData) => {
-        setFruitData(formData)
+        setVegetableData(formData)
         setModalBool(false)
         try {
-            putFruits(id, formData);
+            putVegetables(id, formData);
         } catch (error) {
             console.error(error);
         }
@@ -63,18 +63,18 @@ export default function DetailPage() {
     }, [id])
 
     useEffect(() => {
-        setFormData(fruitData);
-    }, [fruitData]);
+        setFormData(vegetableData);
+    }, [vegetableData]);
 
     return (
         <>
             <section className='card'>
-                <h1>{fruitData.title}</h1>
+                <h1>{vegetableData.title}</h1>
                 <AppLike id={parseInt(id)}></AppLike>
                 <FontAwesomeIcon className='detail-icon-top-right' icon={faPen} onClick={() => setModalBool(prev => !prev)} />
-                <div>{fruitData.category}</div>
-                <div>Calorie: {fruitData.calories}</div>
-                {fruitData.nutritionalValues && fruitData.nutritionalValues.map((item, index) => {
+                <div>{vegetableData.category}</div>
+                <div>Calorie: {vegetableData.calories}</div>
+                {vegetableData.nutritionalValues && vegetableData.nutritionalValues.map((item, index) => {
                     return (
                         <div className='nutritionalValues' key={index}>
                             <span>{item.name}</span>
@@ -91,7 +91,7 @@ export default function DetailPage() {
 
             <AppModal
                 isOpen={modalBool}
-                title={<h4>Modifica frutto</h4>}
+                title={<h4>Modifica verdura</h4>}
                 onClose={() => setModalBool(false)}
                 addBtn={<button onClick={addRowFormData}>+</button>}
                 onConfirm={() => {

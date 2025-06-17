@@ -10,33 +10,33 @@ import debounce from 'lodash/debounce';
 import AppModal from '../components/AppModal';
 
 const defaultValues = {
-    "title": "Banana",
-    "calories": 89,
-    "category": "Bacche",
+    "title": "Insalata",
+    "calories": 22,
+    "category": "Lattuga",
     "nutritionalValues": [
         {
             "name": "Carboidrati",
-            "quantity": 23,
+            "quantity": 3,
             "unit": "g"
         },
         {
             "name": "Fibre",
-            "quantity": 2.6,
+            "quantity": 1.3,
             "unit": "g"
         },
         {
             "name": "Zuccheri",
-            "quantity": 12,
+            "quantity": 2,
             "unit": "g"
         },
         {
-            "name": "Potassio",
-            "quantity": 358,
+            "name": "Ferro",
+            "quantity": 5.2,
             "unit": "mg"
         },
         {
-            "name": "Vitamina B6",
-            "quantity": 0.4,
+            "name": "Vitamina C",
+            "quantity": 6,
             "unit": "mg"
         }
     ]
@@ -56,7 +56,7 @@ const initialValue = {
 }
 
 export default function HomePage() {
-    const { fruits, allCategory, getSingleFruit, deleteFruits, addFruits } = useGlobalContext()
+    const { vegetables, allCategory, getSingleVegetable, deleteVegetables, addVegetables } = useGlobalContext()
 
     const [searchInput, setSearchInput] = useState('')
     const [boxInput, setBoxInput] = useState([])
@@ -81,7 +81,7 @@ export default function HomePage() {
     }
 
     const orderedData = useMemo(() => {
-        let result = [...fruits]
+        let result = [...vegetables]
 
         if (searchInput.trim()) {
             result = result.filter((item) => item.title.toLowerCase().includes(searchInput.toLowerCase()))
@@ -105,7 +105,7 @@ export default function HomePage() {
             );
         }
         return result
-    }, [fruits, searchInput, boxInput, sortBy, sortOrder])
+    }, [vegetables, searchInput, boxInput, sortBy, sortOrder])
 
 
     //non utilizzo il debounce perche nel caso abbia già il dato non effetto la chiamata
@@ -113,10 +113,10 @@ export default function HomePage() {
         const selectedValue = parseInt(id)
 
         if (selectedValue) {
-            const selectedItem = fruits.find(item => item.id === selectedValue)
+            const selectedItem = vegetables.find(item => item.id === selectedValue)
             if (selectedItem && !elemDaConfrontare.some(item => item.id === selectedItem.id)) {
                 try {
-                    const response = await getSingleFruit(id)
+                    const response = await getSingleVegetable(id)
                     setElemDaConfrontare(prev => [...prev, response])
                 } catch (error) {
                     console.error('Error fetching data:', error);
@@ -158,7 +158,7 @@ export default function HomePage() {
     const handleInput = useCallback(debounce(setSearchInput, 300), [])
     const handleCreate = useCallback(debounce(data => {
         try {
-            addFruits(data)
+            addVegetables(data)
         } catch (err) {
             console.error(err);
         }
@@ -166,7 +166,7 @@ export default function HomePage() {
         , 250), [])
     const handleDelete = useCallback(debounce(id => {
         try {
-            deleteFruits(id)
+            deleteVegetables(id)
         } catch (error) {
             console.error(error);
 
@@ -236,7 +236,7 @@ export default function HomePage() {
 
             <AppModal
                 isOpen={modalBool}
-                title={<h4>Aggiungi frutto</h4>}
+                title={<h4>Aggiungi verdura</h4>}
                 onClose={() => setModalBool(false)}
                 addBtn={<button onClick={addRowFormData}>+</button>}
                 onConfirm={() => {

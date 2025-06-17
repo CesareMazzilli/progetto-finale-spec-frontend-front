@@ -9,10 +9,10 @@ type NutritionalValue = {
   unit: string;   // g
 };
 
-export type Fruit = {
+export type Vegetable = {
 
   readonly title: string;
   readonly calories: number; // Calorie per 100g
-  readonly category: string; // "Agrume"
+  readonly category: string; // "Ortaggio"
   nutritionalValues: NutritionalValue[]; // Un array di valori nutrizionali
 };

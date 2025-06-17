@@ -1,32 +1,32 @@
-export const fruit =[
+export const vegetable = [
   {
-    "title": "Mela",
-    "calories": 52,
-    "category": "Pomo",
+    "title": "Insalata",
+    "calories": 22,
+    "category": "Lattuga",
     "nutritionalValues": [
       {
         "name": "Carboidrati",
-        "quantity": 14,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "name": "Fibre",
-        "quantity": 2.4,
+        "quantity": 1.3,
         "unit": "g"
       },
       {
         "name": "Zuccheri",
-        "quantity": 10,
+        "quantity": 2,
         "unit": "g"
       },
       {
-        "name": "Potassio",
-        "quantity": 107,
+        "name": "Ferro",
+        "quantity": 5.2,
         "unit": "mg"
       },
       {
         "name": "Vitamina C",
-        "quantity": 4.6,
+        "quantity": 6,
         "unit": "mg"
       }
     ],
@@ -35,33 +35,33 @@ export const fruit =[
     "updatedAt": "2025-04-28T09:43:52.520Z"
   },
   {
-    "title": "Banana",
-    "calories": 89,
-    "category": "Bacche",
+    "title": "Pomodoro",
+    "calories": 19,
+    "category": "Falso-Frutto",
     "nutritionalValues": [
       {
         "name": "Carboidrati",
-        "quantity": 23,
+        "quantity": 3.9,
         "unit": "g"
       },
       {
         "name": "Fibre",
-        "quantity": 2.6,
+        "quantity": 1.2,
         "unit": "g"
       },
       {
-        "name": "Zuccheri",
-        "quantity": 12,
+        "name": "Grassi",
+        "quantity": 0.2,
         "unit": "g"
       },
       {
         "name": "Potassio",
-        "quantity": 358,
+        "quantity": 237,
         "unit": "mg"
       },
       {
-        "name": "Vitamina B6",
-        "quantity": 0.4,
+        "name": "Vitamina C",
+        "quantity": 13,
         "unit": "mg"
       }
     ],
@@ -70,48 +70,13 @@ export const fruit =[
     "updatedAt": "2025-04-28T09:45:52.520Z"
   },
   {
-    "title": "Arancia",
-    "calories": 47,
-    "category": "Agrume",
+    "title": "Peperone",
+    "calories": 31,
+    "category": "Ortaggio",
     "nutritionalValues": [
       {
         "name": "Carboidrati",
-        "quantity": 12,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 2.4,
-        "unit": "g"
-      },
-      {
-        "name": "Zuccheri",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "name": "Vitamina C",
-        "quantity": 53.2,
-        "unit": "mg"
-      },
-      {
-        "name": "Folato",
-        "quantity": 30,
-        "unit": "mcg"
-      }
-    ],
-    "id": 3,
-    "createdAt": "2025-04-28T09:48:44.225Z",
-    "updatedAt": "2025-05-05T17:36:14.741Z"
-  },
-  {
-    "title": "Fragola",
-    "calories": 32,
-    "category": "Frutto di bosco",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 8,
+        "quantity": 6,
         "unit": "g"
       },
       {
@@ -121,207 +86,32 @@ export const fruit =[
       },
       {
         "name": "Zuccheri",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
         "name": "Vitamina C",
-        "quantity": 58.8,
+        "quantity": 80.4,
         "unit": "mg"
-      },
-      {
-        "name": "Manganese",
-        "quantity": 0.4,
-        "unit": "mg"
-      }
-    ],
-    "id": 4,
-    "createdAt": "2025-04-28T09:48:56.782Z",
-    "updatedAt": "2025-04-28T09:48:56.782Z"
-  },
-  {
-    "title": "Mirtillo",
-    "calories": 57,
-    "category": "Frutto di bosco",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 14,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 2.4,
-        "unit": "g"
-      },
-      {
-        "name": "Zuccheri",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Vitamina K",
-        "quantity": 19.3,
-        "unit": "mcg"
-      },
-      {
-        "name": "Manganese",
-        "quantity": 0.3,
-        "unit": "mg"
-      }
-    ],
-    "id": 5,
-    "createdAt": "2025-04-28T09:49:05.614Z",
-    "updatedAt": "2025-04-28T09:49:05.614Z"
-  },
-  {
-    "title": "Anguria",
-    "calories": 30,
-    "category": "Cucurbitacee",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 8,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 0.4,
-        "unit": "g"
-      },
-      {
-        "name": "Zuccheri",
-        "quantity": 6,
-        "unit": "g"
-      },
-      {
-        "name": "Vitamina C",
-        "quantity": 8.1,
-        "unit": "mg"
-      },
-      {
-        "name": "Licopene",
-        "quantity": 4.5,
-        "unit": "mg"
-      }
-    ],
-    "id": 6,
-    "createdAt": "2025-04-28T09:49:13.117Z",
-    "updatedAt": "2025-04-28T09:49:13.117Z"
-  },
-  {
-    "title": "Uva",
-    "calories": 69,
-    "category": "Bacche",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 18,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 0.9,
-        "unit": "g"
-      },
-      {
-        "name": "Zuccheri",
-        "quantity": 15,
-        "unit": "g"
       },
       {
         "name": "Potassio",
-        "quantity": 191,
-        "unit": "mg"
-      },
-      {
-        "name": "Vitamina K",
-        "quantity": 14.6,
-        "unit": "mcg"
-      }
-    ],
-    "id": 7,
-    "createdAt": "2025-04-28T09:49:22.191Z",
-    "updatedAt": "2025-04-28T09:49:22.191Z"
-  },
-  {
-    "title": "Pesca",
-    "calories": 39,
-    "category": "Drupacea",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 9.5,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 1.5,
-        "unit": "g"
-      },
-      {
-        "name": "Zuccheri",
-        "quantity": 8.4,
-        "unit": "g"
-      },
-      {
-        "name": "Potassio",
-        "quantity": 190,
-        "unit": "mg"
-      },
-      {
-        "name": "Vitamina C",
-        "quantity": 6.6,
+        "quantity": 211,
         "unit": "mg"
       }
     ],
-    "id": 8,
-    "createdAt": "2025-04-28T09:49:29.710Z",
-    "updatedAt": "2025-04-28T09:49:29.710Z"
+    "id": 3,
+    "createdAt": "2025-04-28T09:48:44.225Z",
+    "updatedAt": "2025-05-05T17:36:14.741Z"
   },
   {
-    "title": "Avocado",
-    "calories": 160,
-    "category": "Bacche",
+    "title": "Carota",
+    "calories": 41,
+    "category": "Ortaggio da radice",
     "nutritionalValues": [
       {
         "name": "Carboidrati",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "name": "Fibre",
-        "quantity": 7,
-        "unit": "g"
-      },
-      {
-        "name": "Grassi",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Potassio",
-        "quantity": 485,
-        "unit": "mg"
-      },
-      {
-        "name": "Vitamina K",
-        "quantity": 26,
-        "unit": "mcg"
-      }
-    ],
-    "id": 9,
-    "createdAt": "2025-04-28T09:49:38.151Z",
-    "updatedAt": "2025-05-05T17:50:32.475Z"
-  },
-  {
-    "title": "Limone",
-    "calories": 29,
-    "category": "Agrume",
-    "nutritionalValues": [
-      {
-        "name": "Carboidrati",
-        "quantity": 9,
+        "quantity": 9.6,
         "unit": "g"
       },
       {
@@ -331,17 +121,227 @@ export const fruit =[
       },
       {
         "name": "Zuccheri",
-        "quantity": 2.5,
+        "quantity": 4.7,
         "unit": "g"
       },
       {
         "name": "Vitamina C",
-        "quantity": 53,
+        "quantity": 5.9,
         "unit": "mg"
       },
       {
         "name": "Potassio",
-        "quantity": 138,
+        "quantity": 320,
+        "unit": "mg"
+      }
+    ],
+    "id": 4,
+    "createdAt": "2025-04-28T09:48:56.782Z",
+    "updatedAt": "2025-04-28T09:48:56.782Z"
+  },
+  {
+    "title": "Cetriolo",
+    "calories": 14,
+    "category": "Ortaggio",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 3.63,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Proteine",
+        "quantity": 0.65,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamina K",
+        "quantity": 16.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Magnesio",
+        "quantity": 13,
+        "unit": "mg"
+      }
+    ],
+    "id": 5,
+    "createdAt": "2025-04-28T09:49:05.614Z",
+    "updatedAt": "2025-04-28T09:49:05.614Z"
+  },
+  {
+    "title": "Cipolla",
+    "calories": 35,
+    "category": "Ortaggi da bulbo",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 9.34,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 1.7,
+        "unit": "g"
+      },
+      {
+        "name": "Zuccheri",
+        "quantity": 4.24,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamina C",
+        "quantity": 7.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Fosforo",
+        "quantity": 29,
+        "unit": "mg"
+      }
+    ],
+    "id": 6,
+    "createdAt": "2025-04-28T09:49:13.117Z",
+    "updatedAt": "2025-04-28T09:49:13.117Z"
+  },
+  {
+    "title": "Aglio",
+    "calories": 40,
+    "category": "Amaryllidaceae",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 8.4,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 3.1,
+        "unit": "g"
+      },
+      {
+        "name": "Lipidi",
+        "quantity": 0.6,
+        "unit": "g"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 600,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcio",
+        "quantity": 14,
+        "unit": "mg"
+      }
+    ],
+    "id": 7,
+    "createdAt": "2025-04-28T09:49:22.191Z",
+    "updatedAt": "2025-04-28T09:49:22.191Z"
+  },
+  {
+    "title": "Broccolo",
+    "calories": 27,
+    "category": "Ortaggi a fiore",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 3.1,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 3.1,
+        "unit": "g"
+      },
+      {
+        "name": "Proteine",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 340,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamina C",
+        "quantity": 89.2,
+        "unit": "mg"
+      }
+    ],
+    "id": 8,
+    "createdAt": "2025-04-28T09:49:29.710Z",
+    "updatedAt": "2025-04-28T09:49:29.710Z"
+  },
+  {
+    "title": "Zucchina",
+    "calories": 15,
+    "category": "Ortaggio",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 3.11,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Lipidi",
+        "quantity": 0.32,
+        "unit": "g"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 261,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodio",
+        "quantity": 8,
+        "unit": "mg"
+      }
+    ],
+    "id": 9,
+    "createdAt": "2025-04-28T09:49:38.151Z",
+    "updatedAt": "2025-05-05T17:50:32.475Z"
+  },
+  {
+    "title": "Radicchio",
+    "calories": 23,
+    "category": "Ortaggi a foglia",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 1.6,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Zuccheri",
+        "quantity": 1.6,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamina C",
+        "quantity": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 240,
         "unit": "mg"
       }
     ],

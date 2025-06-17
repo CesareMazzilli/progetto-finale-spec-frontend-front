@@ -5,7 +5,7 @@ export default function AppModal({ isOpen, onClose, content, addBtn, onConfirm, 
 
     return (
         <div className={`modal-comparator ${isOpen ? 'active' : ''}`}>
-            {/* {isModifica ? <h4>Modifica frutto</h4> : <h4>Aggiungi frutto</h4>}*/}
+            {/* {isModifica ? <h4>Modifica verdura</h4> : <h4>Aggiungi verdura</h4>}*/}
             {title}
             <div className="modal-comparator-select">
                 {content}
