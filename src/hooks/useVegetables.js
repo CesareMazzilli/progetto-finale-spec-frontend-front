@@ -91,7 +91,7 @@ export default function useVegetables() {
 
     const allCategory = useMemo(() => {
         const categories = []
-        fruits.forEach((item) => {
+        vegetables.forEach((item) => {
             if (!categories.includes(item.category)) {
                 categories.push(item.category)
             }
