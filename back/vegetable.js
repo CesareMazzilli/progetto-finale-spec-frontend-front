@@ -348,5 +348,75 @@ export const vegetable = [
     "id": 10,
     "createdAt": "2025-04-28T09:49:45.863Z",
     "updatedAt": "2025-04-28T09:49:45.863Z"
+  },
+  {
+    "title": "Melanzana",
+    "calories": 25,
+    "category": "Solanacee",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 2.6,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 2.6,
+        "unit": "g"
+      },
+      {
+        "name": "Proteine",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamina C",
+        "quantity": 11,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 190,
+        "unit": "mg"
+      }
+    ],
+    "id": 11,
+    "createdAt": "2025-04-28T09:49:45.863Z",
+    "updatedAt": "2025-04-28T09:49:45.863Z"
+  },
+  {
+    "title": "Sedano",
+    "calories": 20,
+    "category": "Apiaceae",
+    "nutritionalValues": [
+      {
+        "name": "Carboidrati",
+        "quantity": 2.4,
+        "unit": "g"
+      },
+      {
+        "name": "Fibre",
+        "quantity": 1.6,
+        "unit": "g"
+      },
+      {
+        "name": "Zuccheri",
+        "quantity": 2.2,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamina C",
+        "quantity": 32,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassio",
+        "quantity": 280,
+        "unit": "mg"
+      }
+    ],
+    "id": 12,
+    "createdAt": "2025-04-28T09:49:45.863Z",
+    "updatedAt": "2025-04-28T09:49:45.863Z"
   }
 ]
