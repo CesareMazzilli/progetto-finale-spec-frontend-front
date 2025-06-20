@@ -9,39 +9,6 @@ import Comparator from '../components/Comparator';
 import debounce from 'lodash/debounce';
 import AppModal from '../components/AppModal';
 
-const defaultValues = {
-    "title": "Insalata",
-    "calories": 22,
-    "category": "Lattuga",
-    "nutritionalValues": [
-        {
-            "name": "Carboidrati",
-            "quantity": 3,
-            "unit": "g"
-        },
-        {
-            "name": "Fibre",
-            "quantity": 1.3,
-            "unit": "g"
-        },
-        {
-            "name": "Zuccheri",
-            "quantity": 2,
-            "unit": "g"
-        },
-        {
-            "name": "Ferro",
-            "quantity": 5.2,
-            "unit": "mg"
-        },
-        {
-            "name": "Vitamina C",
-            "quantity": 6,
-            "unit": "mg"
-        }
-    ]
-}
-
 const initialValue = {
     "title": "",
     "category": "",
@@ -164,14 +131,26 @@ export default function HomePage() {
         }
     }
         , 250), [])
-    const handleDelete = useCallback(debounce(id => {
-        try {
-            deleteVegetables(id)
-        } catch (error) {
-            console.error(error);
 
-        }
-    }, 250), [])
+    //const handleDelete = useCallback(debounce(id => {
+    //    try {
+    //        deleteVegetables(id)
+    //    } catch (error) {
+    //        console.error(error);
+
+    //    }
+    //}, 250), [])
+
+    const handleDelete = async (id) => {
+    try {
+        await deleteVegetables(id);
+        // Mostra messaggio di successo, se vuoi
+    } catch (error) {
+        console.error("Errore durante la cancellazione:", error);
+        // Mostra un messaggio all’utente
+    }
+};
+
 
     const arrow = (sortOrder === -1 ? <FontAwesomeIcon icon={faArrowUp} /> : <FontAwesomeIcon icon={faArrowDown} />);
 

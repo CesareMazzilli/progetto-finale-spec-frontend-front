@@ -14,7 +14,6 @@ export default function useVegetables() {
 
     const getVegetables = async () => {
         try {
-            // const response = await fetchData(`${api}/vegetble`)
             setVegetables(vegetable)
         } catch (error) {
             console.error("Error fetching data:", error)
@@ -23,7 +22,6 @@ export default function useVegetables() {
 
     const getSingleVegetable = async (id) => {
         const idToFind = parseInt(id)
-        // const response = await fetchData(`${api}/vegetables/${id}`)
         const response = vegetables.find(item => item.id === idToFind)
 
         if (response === undefined) {
@@ -32,19 +30,39 @@ export default function useVegetables() {
         return response
     }
 
+    //const deleteVegetables = async (id) => {
+    //    const idToFind = parseInt(id);
+    //    const response = vegetables.find(vegetable => vegetable.id === idToFind);
+
+    //    console.log(response);
+
+    //    if (response) {
+    //        setVegetables(prev => prev.filter(item => item.id !== id))
+    //    }
+    //    if (!response) {
+    //        throw new Error("Error deleting data:", response)
+    //    }
+    //}
+
     const deleteVegetables = async (id) => {
+    try {
         const idToFind = parseInt(id);
         const response = vegetables.find(vegetable => vegetable.id === idToFind);
 
         console.log(response);
 
         if (response) {
-            setVegetables(prev => prev.filter(item => item.id !== id))
+            setVegetables(prev => prev.filter(item => item.id !== idToFind));
+        } else {
+            throw new Error("Vegetable not found with id: " + id);
         }
-        if (!response) {
-            throw new Error("Error deleting data:", response)
-        }
+
+    } catch (error) {
+        console.error("Error deleting data:", error);
+        throw error; // opzionale, puoi rilanciarlo o gestirlo qui
     }
+};
+
 
     const addVegetables = async (data) => {
         const response = await fetch(`${api}/vegetables`, {
