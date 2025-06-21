@@ -144,10 +144,8 @@ export default function HomePage() {
     const handleDelete = async (id) => {
     try {
         await deleteVegetables(id);
-        // Mostra messaggio di successo, se vuoi
     } catch (error) {
         console.error("Errore durante la cancellazione:", error);
-        // Mostra un messaggio all’utente
     }
 };
 

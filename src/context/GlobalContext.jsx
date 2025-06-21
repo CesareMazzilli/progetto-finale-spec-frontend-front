@@ -42,4 +42,4 @@ function useGlobalContext() {
     return context;
 }
 
-export { useGlobalContext, GlobalProvider };
+export { useGlobalContext, GlobalProvider};

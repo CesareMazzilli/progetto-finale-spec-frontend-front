@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import fetchData from "../utilities.js";
 import { vegetable } from "../../back/vegetable.js";
 
 export default function useVegetables() {
@@ -30,19 +29,6 @@ export default function useVegetables() {
         return response
     }
 
-    //const deleteVegetables = async (id) => {
-    //    const idToFind = parseInt(id);
-    //    const response = vegetables.find(vegetable => vegetable.id === idToFind);
-
-    //    console.log(response);
-
-    //    if (response) {
-    //        setVegetables(prev => prev.filter(item => item.id !== id))
-    //    }
-    //    if (!response) {
-    //        throw new Error("Error deleting data:", response)
-    //    }
-    //}
 
     const deleteVegetables = async (id) => {
     try {
@@ -59,7 +45,7 @@ export default function useVegetables() {
 
     } catch (error) {
         console.error("Error deleting data:", error);
-        throw error; // opzionale, puoi rilanciarlo o gestirlo qui
+        throw error;
     }
 };
 
