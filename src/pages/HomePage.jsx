@@ -75,7 +75,7 @@ export default function HomePage() {
     }, [vegetables, searchInput, boxInput, sortBy, sortOrder])
 
 
-    //non utilizzo il debounce perche nel caso abbia già il dato non effetto la chiamata
+    //Non utilizzo il debounce perchè nel caso abbia già il dato, non effetto la chiamata
     async function addElemComp(id) {
         const selectedValue = parseInt(id)
 
@@ -132,22 +132,14 @@ export default function HomePage() {
     }
         , 250), [])
 
-    //const handleDelete = useCallback(debounce(id => {
-    //    try {
-    //        deleteVegetables(id)
-    //    } catch (error) {
-    //        console.error(error);
-
-    //    }
-    //}, 250), [])
 
     const handleDelete = async (id) => {
-    try {
-        await deleteVegetables(id);
-    } catch (error) {
+      try {
+           await deleteVegetables(id);
+        } catch (error) {
         console.error("Errore durante la cancellazione:", error);
-    }
-};
+        }
+    };
 
 
     const arrow = (sortOrder === -1 ? <FontAwesomeIcon icon={faArrowUp} /> : <FontAwesomeIcon icon={faArrowDown} />);

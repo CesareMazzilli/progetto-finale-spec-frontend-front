@@ -2,7 +2,6 @@
     background-image: url('/verdure.png');
 }
 
-/* Stile per l'input di ricerca */
 input[type="ricerca"] {
     width: 100%;
     max-width: 400px;
@@ -14,7 +13,6 @@ input[type="ricerca"] {
     font-size: 16px;
 }
 
-/* Stile per il form delle categorie */
 .home-filter-checkbox {
     flex-wrap: wrap;
     gap: 15px;
@@ -41,7 +39,6 @@ input[type="ricerca"] {
     width: min-content;
 }
 
-/* Aggiunto stile per la classe 'home-filter' */
 .home-filter {
     /* background-color: red; */
     display: flex;
@@ -50,7 +47,6 @@ input[type="ricerca"] {
     gap: 12px;
 }
 
-/* Aggiunto stile per l'icona con background */
 .home-filter .fa-filter {
     color: #fff;
     background-color: #007bff;
@@ -59,7 +55,6 @@ input[type="ricerca"] {
     cursor: pointer;
 }
 
-/* Stile per i titoli ordinabili */
 .sortable-header {
     cursor: pointer;
     font-weight: bold;
@@ -76,7 +71,6 @@ input[type="ricerca"] {
     background-color: #0056b3;
 }
 
-/* Stile per il contenitore delle card */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +79,6 @@ input[type="ricerca"] {
     padding: 20px;
 }
 
-/* Stile per le card */
 .card {
     flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
@@ -127,7 +120,6 @@ input[type="ricerca"] {
     color: #d62828;
 }
 
-/* Stile per posizionare l'icona nell'angolo in alto a destra della card */
 .card .home-icon-top-right {
     right: 20px;
     color: #007bff;
@@ -149,7 +141,6 @@ input[type="ricerca"] {
     color: #0056b3;
 }
 
-/* Animazione per il like */
 @keyframes like-animation {
     0% {
         transform: scale(1);
@@ -186,9 +177,7 @@ input[type="ricerca"] {
     width: fit-content
 }
 
-/* XXXXXXXXXXXXXXX
-COMPARTOR
-XXXXXXXXXXX */
+
 
 .home-comparator-container {
     display: flex;
@@ -245,7 +234,6 @@ XXXXXXXXXXX */
     margin: 5px 0;
 }
 
-/* Stile per la sezione section-comparator */
 .section-comparator {
     position: relative;
     display: flex;
@@ -338,7 +326,6 @@ XXXXXXXXXXX */
     margin: 5px 0;
 }
 
-/* Stile per il bottone in posizione fissa in basso a destra */
 .fixed-bottom-right-button {
     position: fixed;
     bottom: 20px;

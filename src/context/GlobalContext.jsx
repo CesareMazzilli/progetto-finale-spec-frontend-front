@@ -22,8 +22,8 @@ function GlobalProvider({ children }) {
 
 
     const globalProviderValue = {
-        like, handleLike, // Like state and function
-        sideVisible, setSideVisible, // Sidebar visibility state and function
+        like, handleLike,
+        sideVisible, setSideVisible,
         vegetables, setVegetables, getVegetables, getSingleVegetable, deleteVegetables, addVegetables, putVegetables, allCategory
     };
 

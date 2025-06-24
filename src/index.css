@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Stile generale */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f4f8;
@@ -21,7 +20,6 @@ body {
     display: flex;
 }
 
-/* Stile per i link */
 a {
     color: #007bff;
     text-decoration: none;
@@ -32,7 +30,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Stile aggiornato per la nav bar */
 nav {
     background-image: url('/verdure.png');
     padding: 1rem;
