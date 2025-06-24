@@ -134,12 +134,15 @@ export default function HomePage() {
 
 
     const handleDelete = async (id) => {
-      try {
-           await deleteVegetables(id);
+        try {
+            await deleteVegetables(id);
+        // Mostra messaggio di successo, se vuoi
         } catch (error) {
-        console.error("Errore durante la cancellazione:", error);
+            console.error("Errore durante la cancellazione:", error);
+        // Mostra un messaggio all’utente
         }
     };
+
 
 
     const arrow = (sortOrder === -1 ? <FontAwesomeIcon icon={faArrowUp} /> : <FontAwesomeIcon icon={faArrowDown} />);
